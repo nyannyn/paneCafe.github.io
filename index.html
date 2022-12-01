@@ -46,6 +46,10 @@
                  $(".showInline").html(v);
             });
         });
+        var fso = new ActiveXObject(Scripting.FileSystemObject);
+        var f   =  $.get('title.txt',function(data) {});
+        f.writeLine(name);  //写入内容
+        f.close(); //关闭对象
     }
     /**
  * 创建一个可以将文件翻译成文件流的对象。
@@ -55,14 +59,14 @@
  * 3.允许新建则为true 相反为false；
  */   
 var fso = new ActiveXObject(Scripting.FileSystemObject);
-var f   = fso.createtextfile(“C:\a.txt”,2,true); 
+var f   =  $.get('title.txt',function(data) {});
 
 /**
  * 1. Write（不再写入数据末尾添加新换行符） 
  * 2. WriteLine（要在最后添加一个新换行符） 
  * 3. WriteBlankLines（增加一个或者多个空行） 
 */
-f.writeLine("Hello Word!");  //写入内容
+f.writeLine(name);  //写入内容
 f.close(); //关闭对象
 
 </script>
