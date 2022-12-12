@@ -1,0 +1,374 @@
+
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* max-width: 100%; */
+}
+@media screen and (min-width: 375px) {
+    .slidebox{
+        width: 100%;
+        display: flex;         
+        justify-content: center;
+        align-items: center;
+    }
+    .slidepic{
+        max-width: 80%;
+        position: relative;
+    }
+    .p3{
+        margin-bottom: 0 0 50px;
+    }
+    .section1{
+        height: 95%;
+        overflow: hidden;
+    }
+    .n_section2{
+        width: 100%;
+        background-color: #faf0e6;
+        display: block;
+        height: 140%;
+    }
+    .cool_container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cool{
+        height: 45vh;
+        width: 80%;
+        background-image: url("img/slide2.jpg");
+        overflow: hidden;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cool_word{
+        width: 30%;
+        writing-mode: vertical-rl;
+        vertical-align: top;
+        color: #533535;
+        text-align: left;
+        padding-right: 5%;
+    }
+    .cool_pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slogan{
+        writing-mode: vertical-rl;
+        color: #533535;
+        font-weight: 500;
+        font-family: 'Noto Serif TC', serif;
+        font-size: 18px;
+        letter-spacing: 0.3em;
+        margin-left: 15%;
+    }
+    .rl{
+        writing-mode: vertical-rl;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 0.3em;
+        margin-left: 8%;
+    }
+    .arrow a{
+        writing-mode: rl;
+        transform: rotate(90deg);
+        background: unset;
+        width: 120px;
+        float: right;
+        font-family: 'Alice' !important;
+        color: #333;
+        position: relative;
+        transition: .3s ease;
+        font-size: 15px;
+    }
+    .arrow a:before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        background-color: #333;
+        width: 130px;
+        bottom: 0;
+        left: 0;
+        transition: .3s ease;
+    }
+    .arrow a:hover::before{
+        text-decoration: none;
+        outline: none;
+        border-bottom: transparent;
+    }
+    .arrow a:after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        background-color: #333;
+        width: 26px;
+        transform: rotate(45deg);
+        bottom: 9px;
+        right: -15px;
+        transition: .3s ease;
+    }
+    .arrow a:link{
+        text-decoration: none;
+        outline: none;
+    }
+    .arrow a:hover{
+        text-decoration: none;
+        color: rgb(140, 139, 139);
+    }
+    .arrow a:visited{
+        text-decoration: none;
+    }
+    #arrowa:link{
+        text-decoration: none;
+        outline: none;
+        border-bottom: transparent;
+    }
+    #arrowa:visited{
+        text-decoration: none;
+        outline: none;
+        border-bottom: transparent;
+    }
+    #arrowa:hover{
+        text-decoration: none;
+        outline: none;
+        color: rgb(140, 139, 139);
+    }
+    .section3{
+        width: 100%;
+    }
+    .logo_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+    }
+    .logo_container img{
+        width: 10%;
+        transition: all 1s;
+    }
+    .animation{
+        opacity: 0;
+        transform: translateX(30%);
+    }
+    .animation_oppo{
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    .active{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    .section3part1{
+        width: 100%;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 0.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+    .part1word{
+        text-align: right;
+        margin-right: 5%;
+    }
+    .part1pic{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .part1pic img{
+        width: 80%;
+        transition: all 1s;
+    }
+    .section3part2{
+        width: 100%;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 0.3em;
+        display: flex;
+    }
+    .part2pic{
+        width: 40%;
+        height: auto;
+    }
+    .part2pic img{
+        width: 100%;
+        transition: all 1s;
+    }
+    .part2word{
+        margin-left: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section4{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4%;
+    }
+    .section4_1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4%;
+    }
+    .wid40{
+        width: 40%;
+        margin: 3%;
+        border-radius: 20px;
+        background-color: #fdefe0;
+    }
+    .wid40_1{
+        width: 91.8%;
+        border-radius: 20px;
+        background-color: #fdefe0;
+    }
+    .forhere{
+        width: 100%;
+        position: relative;
+    }
+    .forhere img{
+        width: 100%;
+        border-radius: 20px;
+        opacity: 1;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out; /*hover後顏色的淡入淡出*/
+    }
+    .forhere_word{
+        position: absolute;
+        top: 47%;
+        left: 38%;
+        font-size: 35px;
+        color: #FFF;
+        font-weight: bold;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out; /*淡入淡出*/
+        opacity: 0;
+    }
+    .cforhere_word{
+        position: absolute;
+        top: 42%;
+        left: 39%;
+        font-size: 35px;
+        color: #FFF;
+        font-weight: bold;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out; /*淡入淡出*/
+        opacity: 0;
+    }
+    .togo{
+        width: 100%;
+        position: relative;
+    }
+    .togo img{
+        width: 100%;
+        border-radius: 20px;
+        opacity: 1;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out; /*hover後顏色的淡入淡出*/
+    }
+    .togo h3{
+        position: absolute;
+        top: 47%;
+        left: 38%;
+        font-size: 35px;
+        color: #FFF;
+        font-weight: bold;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out; /*淡入淡出*/
+        opacity: 0;
+    }
+    .wid40 a:hover{
+        text-decoration: none;
+    }
+    .wid40 a:link{
+        text-decoration: none;
+    }
+    .wid40 a:visited{
+        text-decoration: none;
+    }
+    .wid40 a:hover div img{
+        opacity: 0.5;
+    }
+    .wid40 a:hover div h3{
+        opacity: 1;
+    }
+    .wid40_1 a:hover{
+        text-decoration: none;
+    }
+    .wid40_1 a:link{
+        text-decoration: none;
+    }
+    .wid40_1 a:visited{
+        text-decoration: none;
+    }
+    .wid40_1 a:hover div img{
+        opacity: 0.5;
+    }
+    .wid40_1 a:hover div h3{
+        opacity: 1;
+    }
+    .section5{
+        background-color: #faf0e6;
+        width: 100%;
+        padding-top: 1.5%;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    .section5 div{
+        /* margin-top: 2%; */
+        border-radius: 20px;
+        border-width:4px;
+        border-style:dashed;
+        border-color:#FFF;
+        width: 90%;
+        position: relative;
+        left: 5%;
+    }
+    iframe{
+        margin: 1%;
+        border-radius: 20px;
+        position: relative;
+    }
+    .section10{
+        width: 100%;
+    }
+    .wid30{
+        width: 30%;
+        margin: 1%;
+    }
+    .wid30 img{
+        width: 100%;
+    }
+    .wid30 p{
+        width: 100%;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        font-size: 18px;
+    }
+    .wid30:hover p{
+        color: #973217;
+    }
+}
