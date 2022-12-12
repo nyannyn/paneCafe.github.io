@@ -1,61 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>胖尼咖啡-首頁</title>
+    <!-- 基本資料 -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Pacifico&display=swap" rel="stylesheet">
+
+
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- 頁面小icon -->
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+
 </head>
-<body>
-    <div class="container-fluid  text-center" >
-        <div class="row  justify-content-center">
-            <h2>請輸入!!</h2>
-            <div class="col-6" >
-                <input type="text" placeholder="暱稱" id="username">
-                <input type="submit" class="btn btn-secondary" onclick="readTxt();">
-            </div>
-            <div class="showInline">
+<body >
+
+
+<nav id="navBar" class="navbar fixed-top navbar-expand-lg navbar-light navbox d-block move_down"> <!--bg是背景顏色--> <!--navbar-expand-lg:當螢幕大，顯示此-->
+        <div class="container-fluid"> <!--container-fluid 是擴張到整個空間-->
+            <a class="navbar-brand w-25" href="mainpage.php">
+            <img src="pane_img/logo.png" alt="logo遺失" width="90" height="90">
+            <h1>Pane caffe</h1>
+            </a>
+
+            <!-- 頁面小 -->
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-none p-3">
+                    <ul style="list-style-type: none;">
+                        <li class="nav-item"><a href="introduce.php" style="color:black;">餐點介紹</a></li>
+                        <li class="nav-item"><a href="rules.php" style="color:black;">關於店規</a></li>
+                        <li class="nav-item"><a href="news.php" style="color:black;">最新快訊</a></li>
+                        <li class="nav-item"><a style="color:black;" class="faqbt">FAQ</a></li>
+
+                        <li id="linkbts"><a style="color:black;">登入</a></li>
+                        <li id="registbts"><a style="color:black;">註冊新帳號</a></li>
+                    </ul>
+                </div>
+                </div>
+                <nav class="navbar navbar-light bg-none">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+            
+
+            <!--頁面大-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0" style="padding-right: 30px;"> <!--ms-auto就是左右padding平均推-->
+                    <li class="nav-item" style="padding-right: 40px;" href="discription.php">
+                        <a class="nav-link active underline" href="introduce.php">餐點介紹</a>
+                    </li>
+                    <li class="nav-item" style=" padding-right: 50px;">
+                        <a class="nav-link active underline" aria-current="page" href="news.php">最新快訊</a> <!--active字顏色比較深-->
+                    </li>
+                    <li class="nav-item" style=" padding-right: 50px;">
+                        <a class="nav-link active underline" aria-current="page" href="rules.php">關於店規</a> <!--active字顏色比較深-->
+                    </li>
+                    <li class="nav-item" style="padding-right: 40px;" >
+                        <a class="nav-link active underline faqbt" >FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown" style=" padding-right: 10px">
+                        <a class="nav-link active dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            登入/註冊
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" id="linkbt">登入</a></li>
+                            <li><a class="dropdown-item" id="registbt">註冊新帳號</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+                
 
             </div>
         </div>
-    </div>
+    </nav>
+    <!-- 註冊 -->
+		<div id="regist" >
+			<form class="form" method="post" >
+                <a id="closebt_regist"><img src="pane_img/close.png" class="close_btn"></a>
+				<h2>註冊胖尼會員</h2>
+                <div class="alertmsg2"></div>
+				<p type="姓名"><input placeholder="姓名" maxlength="8" name="mname" id="mname"></input></p>
+				<p type="帳號"><input type="mail" placeholder="請輸入電子郵件"  name="macc" id="macc"></input></p>
+				<p type="密碼"><input type="password" placeholder="請輸入密碼(大小寫英文或數字)" maxlength="12" name="mpw" id="mpw"></input></p>
+                <p type="手機" ><input name="phone" class="phone" placeholder="請輸入手機號碼"></p>
+                    <select class="form-select address" aria-label="Default select example" name="address">
+                                <option selected value="NULL">請選擇您的居住區域</option>
+                                <option value="高雄市鹽埕區">鹽埕區</option>
+                                <option value="三民區">三民區</option>
+                                <option value="前鎮區">前鎮區</option><option value="鼓山區">鼓山區</option><option value="新興區">新興區</option><option value="前金區">前金區</option><option value="左營區">左營區</option><option value="小港區">小港區</option><option value="旗山區">旗山區</option><option value="岡山區">岡山區</option>
+                                <option value="楠梓區">楠梓區</option><option value="苓雅區">苓雅區</option><option value="鳳山區">鳳山區</option><option value="橋頭區">橋頭區</option><option value="美濃區">美濃區</option><option value="大寮區">大寮區</option><option value="永安區">永安區</option><option value="仁武區">仁武區</option>   
+                            </select>
+                <p type="生日(選填)" ><input type="date" name="birth" class="birth"></p>
+				<input type="submit" class="formbutton" id="rsubmit" >
+			</form>
+		</div>
+		<div id="dark"></div>
+        
+
+		<!-- 登入 -->
+			<div id="light">
+				<form class="form" method="post" >
+					<a id="closebt"><img src="pane_img/close.png" class="close_btn"></a>
+					<h2>登入</h2>
+					<h6>即刻登入 享有Pane專屬會員服務</h6>
+                    <div class="alertmsg"></div>
+					<p type="帳號:"><input type="mail" placeholder="請輸入帳號(您的電子郵件)"  name="macc" id="loginmacc"></input></p>
+				    <p type="密碼:"><input type="password" placeholder="請輸入密碼" maxlength="12" name="mpw" id="loginmpw"></input></p>
+					<a id="registbt2" class="hint">還沒有帳號嗎？立即註冊</a>
+					<input id="lsubmit" type="submit" class="formbutton" value="確認" style="float:right;width:68px;">
+				</form>
+			</div>
+		    <div id="fade"></div>
+<section class="n_section2">
+        <div class="cool_container">
+            <div class="cool">
+                <img src="img/logo.png" style="width: 5%;">
+            </div>
+        </div>
+
+        <div class="cool_container">
+            <div class="cool_pic">
+                <img src="img/croissant1.png" style="width: 50%; opacity: 0.2; margin-top: 5%;">
+            </div>
+            <div class="cool_word">
+                <p class="slogan">近年崛起的新口感，用心感動味蕾的胖尼</p>
+                <br>
+                <p class="rl">手作義國情懷ricotta起司</p>
+                <p class="rl">西西里島品質最佳開心果醬</p>
+                <p class="rl">特別配方開發義式咖啡豆</p>
+                <p class="rl">「開個咖啡廳而已，為什麼可頌要做到這種程度？」</p>
+                <p class="rl"> Lucio老闆：「可頌不是本來就該長這樣？」</p>
+                <div class="arrow">
+                    <a href="mainpage.php?mname=<?=$manme?>" target id="arrowa">
+                        view more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section3">
+        <div class="logo_container">
+            <img src="img/logo.png" class="animation">
+        </div>
+        <div class="section3part1">
+            <div class="part1word">
+                <p>舒適小巧的空間、浪漫的裝潢，讓人彷彿身處義大利的咖啡館</p>
+                <p></p>
+            </div>
+            <div class="part1pic">
+                <img src="img/section3img1.jpg" class="animation">
+            </div>
+        </div>
+        <div class="section3part2">
+            <div class="part2pic">
+                <img src="img/section3img2.jpg" class="animation_oppo">
+            </div>
+            <div class="part2word">
+                <p>不定時推出季節限定新品，除了咖啡、可頌，更有其他選擇！</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section4">
+        <div class="nodeco" style="display: flex;justify-content: center;align-items: center;">
+            <div class="wid40">
+            <?php 
+                if(isset($_GET["mname"])){
+                    $mname = $_GET["mname"];
+                }
+            ?>
+                <a class="logincheck" href="forhereform.php?mname=<?=$mname?>">
+                    <div class="forhere">
+                        <img src="img/forhere.jpg">
+                        <h3 class="forhere_word">內用預約</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="wid40">
+                <a class="logincheck" href="togoform.php?mname=<?= $mname?>">
+                    <div class="togo">
+                        <img src="img/togo.jpg">
+                        <h3>外帶預訂</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+            <?php
+                if(!isset($mname)){
+            ?>
+            <script>
+                    $(".logincheck").on("click",function(){
+                        alert("請先登入會員!");
+                        light.show();
+                        fade.show();
+                    })
+            </script>
+            <?php
+                }
+            ?>
+    <section class="section5">
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.8307546082106!2d120.30114531496127!3d22.660097985137895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05373069dd71%3A0x7e3711fbca7fcee5!2z6IOW5bC85ZKW5ZWhIFBhbmUgZSBDYWZmw6g!5e0!3m2!1szh-TW!2stw!4v1653213007614!5m2!1szh-TW!2stw" width="98%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <?php
+        include("./footer/footer.php");
+    ?>
+
 </body>
 </html>
 <script>
-    // $(document).ready(function(){
-        // const inline=['目前沒有使用者'];
-        // $(".btn").click(function(){
-        //     const name = $("#username").val();
-        //     const count = inline.push(name);
-        //     console.log(inline);
-        //     $(".showInline").html(inline);
-        // });
-    // });
-    function readTxt() {
-        const name = $("#username").val();
-        $.get('title.txt',function(data) { 
-            var lines = data.split("\n"); //按行读取
-            $.each(lines,function(i, v) {
-                console.log(v);
-                 $(".showInline").html(v);
-            });
+    //圖片滑入
+    const images = $(".animation,.animation_oppo");
+    function handleScroll(){
+        $.each(images, function(index, image){
+            const imageMiddleOffset = image.offsetTop + image.height / 2;
+            const scrollAt = window.scrollY + window.innerHeight;
+            if(scrollAt > imageMiddleOffset){
+                $(this).attr({class:"active"});
+            }
         });
-        var fs=require('fs');
-        fs.appendFile('test.txt',"我很好！",function(err){
-            if(err) throw err;
-
-            console.log("資料已經被加入");
-
-        });
-        
-        var f   =  $.get('title.txt',function(data) {});
-        f.writeLine(name);  //写入内容
-        f.close(); //关闭对象
     }
+    $(window).scroll(handleScroll);
 </script>
